@@ -1,0 +1,375 @@
+var i = 1;
+while(i<=5){
+    console.log(i);
+    i++;
+}
+VM170:3 1
+VM170:3 2
+VM170:3 3
+VM170:3 4
+VM170:3 5
+5
+var i = 1;
+do{
+    console.log(i);
+    i++;
+}while(i<=5);
+VM215:3 1
+VM215:3 2
+VM215:3 3
+VM215:3 4
+VM215:3 5
+5
+i
+6
+if(i == 6){
+    console.log('Value equal to 6');
+}
+else{
+    console.log('Value not equal to 6');
+}
+VM437:2 Value equal to 6
+undefined
+if(i != 6){
+    console.log('Value equal to 6');
+}
+else{
+    console.log('Value not equal to 6');
+}
+VM452:5 Value not equal to 6
+undefined
+if(i != 6){
+    console.log('Value equal to 6');
+}
+else if(i<10){
+    console.log('Value not equal to 6');
+}
+VM492:5 Value not equal to 6
+undefined
+(i == 6) ? console.log('True') : console.log('False');
+VM692:1 True
+undefined
+true +true
+2
+true +false
+1
+i==6
+true
+i!=6
+false
+switch(i){
+    case 6:console.log('value  = 6');
+        break;
+    default:console.log('default case');
+        
+}
+VM1002:2 value  = 6
+undefined
+switch(i){
+    case 7:console.log('value  = 6');
+        break;
+    default:console.log('default case');
+        
+}
+VM1013:4 default case
+undefined
+//Function Declaration
+//Function Expression or Anonymous Function
+//Arrow Function
+//Optional Argument
+//Default Arguments
+
+undefined
+//function declaration style
+function add(){
+    console.log('Add Function in Function Declaration Style');
+}
+undefined
+add();
+VM1613:3 Add Function in Function Declaration Style
+undefined
+add(1);
+VM1613:3 Add Function in Function Declaration Style
+undefined
+add(1,23);
+VM1613:3 Add Function in Function Declaration Style
+undefined
+add(1,23,[23456,3456]);
+VM1613:3 Add Function in Function Declaration Style
+undefined
+add(1,23,[23456,3456],{id:1010});
+VM1613:3 Add Function in Function Declaration Style
+undefined
+console.dir(add);
+VM1810:1 ƒ add()length: 0name: "add"arguments: nullcaller: nullprototype: {constructor: ƒ}constructor: ƒ add()__proto__: Object__proto__: ƒ ()[[FunctionLocation]]: VM1613:2[[Scopes]]: Scopes[1]
+undefined
+//function declaration style
+function add(){
+    console.log('Add Function in Function Declaration Style ',arguments.length);
+    console.log(arguments);
+}
+undefined
+add();
+VM1981:3 Add Function in Function Declaration Style  0
+VM1981:4 Arguments [callee: ƒ, Symbol(Symbol.iterator): ƒ]length: 0callee: ƒ add()Symbol(Symbol.iterator): ƒ values()__proto__: Object
+undefined
+add(23,34);
+VM1981:3 Add Function in Function Declaration Style  2
+VM1981:4 Arguments(2) [23, 34, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+//function declaration style
+function add(){
+    console.log('Add Function in Function Declaration         Style ',arguments.length);
+    
+    var sum = 0;
+    
+    if(arguments.length>0){
+        for(var item of arguments){
+            sum = sum + item;
+        }
+    }
+    console.log('Sum = ',sum);
+}
+undefined
+add();
+VM2338:3 Add Function in Function Declaration         Style  0
+VM2338:12 Sum =  0
+undefined
+add(1,2);
+VM2338:3 Add Function in Function Declaration         Style  2
+VM2338:12 Sum =  3
+undefined
+add(1,2,45,6,10);
+VM2338:3 Add Function in Function Declaration         Style  5
+VM2338:12 Sum =  64
+undefined
+add
+ƒ add(){
+    console.log('Add Function in Function Declaration         Style ',arguments.length);
+    
+    var sum = 0;
+    
+    if(arguments.length>0){
+        for(var item of arguments){
+            …
+//Function Expression Style or Anonymous Function
+var add = function (){
+    console.log('Anonymous Function');
+}
+undefined
+add();
+VM2770:3 Anonymous Function
+undefined
+//Arrow Function
+var add = ()=>console.log('arrow function');
+undefined
+add();
+VM3047:2 arrow function
+undefined
+//Arrow Function
+var add = ()=>{
+    console.log('arrow function');
+
+}
+undefined
+add();
+VM3133:3 arrow function
+undefined
+add = (a,b)=>a+b;
+(a,b)=>a+b
+add(2,3);
+5
+add = (a,b)=>{
+    return a+b;
+}
+(a,b)=>{
+    return a+b;
+}
+add(2,3);
+5
+typeof add
+"function"
+typeof typeof add;
+"string"
+typeof(typeof(add));
+"string"
+typeof "function";
+"string"
+arr = [12,23,4,56,71];
+(5) [12, 23, 4, 56, 71]
+arr
+(5) [12, 23, 4, 56, 71]
+arr.push(100);
+6
+arr
+(6) [12, 23, 4, 56, 71, 100]
+arr.pop();
+100
+arr
+(5) [12, 23, 4, 56, 71]
+arr.shift(100);
+12
+arr
+(4) [23, 4, 56, 71]
+arr.unshift();
+4
+//Default Argument
+
+function add(a,b){
+    return a+b;
+}
+undefined
+add();
+NaN
+//Default Argument
+
+function add(a,b){
+    console.log(a,b);
+    return a+b;
+}
+undefined
+add();
+VM4462:4 undefined undefined
+NaN
+//Default Argument
+
+function add(a=3,b=2){
+    console.log(a,b);
+    return a+b;
+}
+undefined
+add();
+VM4515:4 3 2
+5
+add(10,23);
+VM4515:4 10 23
+33
+1
+1
+null
+null
+undefined
+undefined
+NaN
+NaN
+0
+0
+temp = 10;
+10
+temp == 10;
+true
+temp == '10'
+true
+//Double Equals
+temp == '10';
+
+//Triple Equals
+temp === 10;
+true
+
+
+//Triple Equals
+temp === '10';
+false
+temp != 10;
+false
+temp != 11;
+true
+temp
+10
+temp != '11';
+true
+temp !== 10;
+false
+temp !== '10';
+true
+add
+ƒ add(a=3,b=2){
+    console.log(a,b);
+    return a+b;
+}
+demo(23);
+VM5532:1 Uncaught ReferenceError: demo is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM5532:1
+function Outer(){
+    
+    function Inner(){
+        console.log('Inner Function');
+    }
+    
+    return Inner;
+}
+undefined
+var temp = Outer();
+undefined
+temp
+ƒ Inner(){
+        console.log('Inner Function');
+    }
+temp();
+VM5713:4 Inner Function
+undefined
+function Calculator(){
+        
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+        
+}
+undefined
+function Calculator(){
+        
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+        
+    return [add,sub];
+}
+undefined
+temp = Calculator();
+(2) [ƒ, ƒ]
+temp
+(2) [ƒ, ƒ]0: ƒ add(a,b)length: 2name: "add"arguments: nullcaller: nullprototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]: VM6158:3[[Scopes]]: Scopes[1]1: ƒ sub(a,b)length: 2__proto__: Array(0)
+temp[0]
+ƒ add(a,b){
+        console.log(a+b);
+    }
+temp[0]();
+VM6158:4 NaN
+undefined
+temp[0](23,1);
+VM6158:4 24
+undefined
+temp[1](23,1);
+VM6158:8 22
+undefined
+function Calculator(){
+        
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+        
+    return {addition:add,subtraction:sub};
+}
+undefined
+temp = Calculator();
+{addition: ƒ, subtraction: ƒ}
+temp.addition(12,34);
+VM6427:4 46
+undefined
+temp.subtraction(12,34);
+VM6427:8 -22
+undefined
