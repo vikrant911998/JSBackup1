@@ -1,0 +1,44 @@
+arr = [12,23,4,56,71];
+(5) [12, 23, 4, 56, 71]
+arr1 = [200,100,300,500,600];
+(5) [200, 100, 300, 500, 600]
+m = [...arr,...arr1];
+(10) [12, 23, 4, 56, 71, 200, 100, 300, 500, 600]
+m
+(10) [12, 23, 4, 56, 71, 200, 100, 300, 500, 600]
+obj
+{id: "101", address: "rohini"}
+obj1
+{id: "102", address: "rohini"}
+n= {...obj,...obj1};
+{id: "102", address: "rohini"}
+temp = {age:23,rollno:1234};
+{age: 23, rollno: 1234}age: 23rollno: 1234__proto__: Object
+n= {...obj,...temp};
+{id: "101", address: "rohini", age: 23, rollno: 1234}
+n= {...obj,...temp,...arr};
+{0: 12, 1: 23, 2: 4, 3: 56, 4: 71, id: "101", address: "rohini", age: 23, rollno: 1234}
+m = [...arr,...arr1,...obj];
+VM5508:1 Uncaught TypeError: obj is not iterable
+    at <anonymous>:1:24
+(anonymous) @ VM5508:1
+n= {...obj,...temp,...arr,...obj1};
+{0: 12, 1: 23, 2: 4, 3: 56, 4: 71, id: "102", address: "rohini", age: 23, rollno: 1234}
+function Demo(a,b,...n){
+    console.log(a,b);
+    for(var item of n){
+        console.log(item);
+    }
+
+}
+undefined
+Demo(2,3);
+VM5859:2 2 3
+undefined
+Demo(2,3,true,'str',456,2345);
+VM5859:2 2 3
+VM5859:4 true
+VM5859:4 str
+VM5859:4 456
+VM5859:4 2345
+undefined

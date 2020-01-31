@@ -1,0 +1,197 @@
+function Calculator(){
+        
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+        
+    return {addition:add,subtraction:sub};
+}
+undefined
+temp  =Calculator();
+{addition: ƒ, subtraction: ƒ}
+temp.addition(2,3);
+VM281:4 5
+undefined
+function print(str){
+    console.log(str);
+}
+undefined
+function Demo(fn){
+    var sum = 10;
+    fn(sum);
+}
+undefined
+function Demo(){
+    console.log('Inside Demo Function');
+    print(23);
+}
+undefined
+Demo();
+VM904:2 Inside Demo Function
+VM505:2 23
+undefined
+Demo(print);
+
+function Demo(fn){ //fn->print
+    var sum = 10; //sum = 10;
+    fn(sum); //print(sum);
+}
+VM505:2 10
+undefined
+arr = [12,23,4,56,71];
+(5) [12, 23, 4, 56, 71]
+for(var item of arr){
+    console.log(item);
+}
+VM1303:2 12
+VM1303:2 23
+VM1303:2 4
+VM1303:2 56
+VM1303:2 71
+undefined
+arr.forEach(print);//print(str){} //str->12,23,4
+VM505:2 12
+VM505:2 23
+VM505:2 4
+VM505:2 56
+VM505:2 71
+undefined
+arr.forEach(
+function(element){
+    console.log(element);
+}
+);
+VM1676:3 12
+VM1676:3 23
+VM1676:3 4
+VM1676:3 56
+VM1676:3 71
+undefined
+arr.forEach((element)=>console.log(element));
+VM1857:1 12
+VM1857:1 23
+VM1857:1 4
+VM1857:1 56
+VM1857:1 71
+undefined
+arr.findIndex(function(element){
+    return element == 4;
+});
+2
+arr.findIndex(function(element){
+    
+});
+-1
+arr.find(function(element){
+      return element%2 != 0;
+});
+23
+arr.find(function(element){
+      element%2 != 0;
+});
+undefined
+arr.find(function(element){
+      return element%2 != 0;
+});
+23
+arr.filter(function(element){
+    return element%2 != 0;
+});
+(2) [23, 71]
+arr.filter(function(element){
+    return element%2 == 0;
+});
+(3) [12, 4, 56]
+arr.includes(12);
+true
+arr.includes(12,1);
+false
+arr
+(5) [12, 23, 4, 56, 71]
+arr.includes(12,0);
+true
+arr.includes(23,2);
+false
+arr.slice();
+(5) [12, 23, 4, 56, 71]
+arr.slice(2);
+(3) [4, 56, 71]
+arr.slice(1,4);
+(3) [23, 4, 56]
+arr.push(100);
+6
+arr.push(51);
+7
+arr.push(68);
+8
+arr
+(8) [12, 23, 4, 56, 71, 100, 51, 68]
+temp = arr;
+(8) [12, 23, 4, 56, 71, 100, 51, 68]
+temp.splice(3);
+(5) [56, 71, 100, 51, 68]
+temp
+(3) [12, 23, 4]0: 121: 232: 4length: 3__proto__: Array(0)
+temp = arr;
+(3) [12, 23, 4]0: 121: 232: 4length: 3__proto__: Array(0)
+arr
+(3) [12, 23, 4]
+arr.push(100);
+4
+arr.push(51);
+5
+arr.push(68);
+6
+arr.push(24);
+7
+arr
+(7) [12, 23, 4, 100, 51, 68, 24]
+arr.splice(3,2);
+(2) [100, 51]
+arr
+(5) [12, 23, 4, 68, 24]
+arr.splice(3,2,12,200,300,400);
+(2) [68, 24]
+arr
+(7) [12, 23, 4, 12, 200, 300, 400]0: 121: 232: 43: 124: 2005: 3006: 400length: 7__proto__: Array(0)
+arr.sort();
+(7) [12, 12, 200, 23, 300, 4, 400]
+arr.sort(function(first,second){
+    return first-second;
+});
+(7) [4, 12, 12, 23, 200, 300, 400]
+arr.sort(function(first,second){
+    return second-first;
+});
+(7) [400, 300, 200, 23, 12, 12, 4]
+arr.map( (element)=>element+5 );
+(7) [405, 305, 205, 28, 17, 17, 9]
+var obj = {
+    id:'101',
+    address:'rohini'
+};
+undefined
+var obj1 = {
+    id:'102',
+    address:'rohini'
+};
+undefined
+var obj2 = {
+    id:'103',
+    address:'rohini'
+};
+undefined
+objs = [obj1,obj,obj2];
+(3) [{…}, {…}, {…}]0: {id: "102", address: "rohini"}id: "102"address: "rohini"__proto__: Object1: {id: "101", address: "rohini"}id: "101"address: "rohini"__proto__: Object2: {id: "103", address: "rohini"}length: 3__proto__: Array(0)
+JSON.stringify(obj);
+"{"id":"101","address":"rohini"}"
+temp = JSON.stringify(obj);
+"{"id":"101","address":"rohini"}"
+temp
+"{"id":"101","address":"rohini"}"
+JSON.parse(temp);
+{id: "101", address: "rohini"}
