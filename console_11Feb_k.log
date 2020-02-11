@@ -1,0 +1,227 @@
+function demo(a,b){
+    console.log(a+b);
+}
+undefined
+demo(12,3);
+VM179:2 15
+undefined
+function Outer(){
+    function add(){
+
+    }
+
+    function sub(){
+
+}
+VM382:8 Uncaught SyntaxError: Unexpected end of input
+function Outer(){
+    function add(a,b){
+        console.log(a+b);
+    }
+
+    function sub(a,b){
+        console.log(a-b);
+    }
+    return {add,sub};
+}
+undefined
+temp = Outer();
+{add: ƒ, sub: ƒ}
+temp.add(23,1);
+VM514:3 24
+undefined
+function Outer(a,b){
+    function add(){
+        console.log(a+b);
+    }
+
+    function sub(){
+        console.log(a-b);
+    }
+    return {add,sub};
+}
+undefined
+temp = Outer();
+{add: ƒ, sub: ƒ}
+temp = Outer(12,2);
+{add: ƒ, sub: ƒ}add: ƒ add()sub: ƒ sub()__proto__: Object
+temp.add();
+VM726:3 14
+undefined
+temp.sub();
+VM726:7 10
+undefined
+function Outer(a,b){
+    var z = 100;
+
+    function add(){
+        console.log(a+b,z);
+    }
+
+    function sub(){
+        console.log(a-b,z);
+    }
+    return {add,sub};
+}
+undefined
+temp = Outer(12,2);
+{add: ƒ, sub: ƒ}
+temp.add();
+VM1292:5 14 100
+undefined
+Outer = 100;
+
+
+100
+typeof Outer;
+"number"
+//IIFE
+temp = (
+function (a,b){
+    var z = 100;
+
+    function add(){
+        console.log(a+b,z);
+    }
+
+    function sub(){
+        console.log(a-b,z);
+    }
+    return {add,sub};
+}
+)(12,2);
+{add: ƒ, sub: ƒ}
+temp
+{add: ƒ, sub: ƒ}
+temp.add();
+VM1713:7 14 100
+undefined
+temp.add(12);
+VM1713:7 14 100
+undefined
+function autoGenerator(){
+    var count = 1;
+
+    function increaseCounter(){
+        console.log(count);
+        count++;
+    }
+
+}
+undefined
+function autoGenerator(){
+    var count = 1;
+
+    function increaseCounter(){
+        console.log(count);
+        count++;
+    }
+    return increaseCounter;
+
+}
+undefined
+temp = autoGenerator();
+ƒ increaseCounter(){
+        console.log(count);
+        count++;
+    }
+temp();
+VM2156:5 1
+undefined
+temp();
+VM2156:5 2
+undefined
+temp();
+VM2156:5 3
+undefined
+temp();
+VM2156:5 4
+undefined
+temp();
+VM2156:5 5
+undefined
+temp();
+VM2156:5 6
+undefined
+autoGenerator = 10;
+10
+typeof autoGenerator;
+"number"
+temp = (function(){
+    var count = 1;
+
+    function increaseCounter(){
+        console.log(count);
+        count++;
+    }
+    return increaseCounter;
+
+})();
+ƒ increaseCounter(){
+        console.log(count);
+        count++;
+    }
+temp();
+VM2474:5 1
+undefined
+temp();
+VM2474:5 2
+undefined
+temp();
+VM2474:5 3
+undefined
+temp();
+VM2474:5 4
+undefined
+temp();
+VM2474:5 5
+undefined
+temp();
+VM2474:5 6
+undefined
+var count = 1;
+
+function counter(){
+    console.log(count);
+    count++;
+}
+
+
+undefined
+counter();
+VM2716:4 1
+undefined
+counter();
+VM2716:4 2
+undefined
+counter();
+VM2716:4 3
+undefined
+counter();
+VM2716:4 4
+undefined
+count = -123;
+-123
+counter();
+VM2716:4 -123
+undefined
+counter();
+VM2716:4 -122
+undefined
+counter();
+VM2716:4 -121
+undefined
+temp = function(a){
+    console.log(a);
+}
+
+ƒ (a){
+    console.log(a);
+}
+temp(23);
+VM3220:2 23
+undefined
+temp
+ƒ (a){
+    console.log(a);
+}
